@@ -21,8 +21,7 @@ export default function HomePage() {
   </a>
 </div>
         <div className={styles.navRight}>
-          <a href="#">Book</a>
-          <a href="#">Category</a>
+          <a href="book">Book</a>
           <input type="text" placeholder="Search a Book" />
         </div>
       </nav>
@@ -32,7 +31,7 @@ export default function HomePage() {
         <h1 className={styles.title}>BOOK RECOMMEND</h1>
         <div className={styles.description}>
           เว็บไซต์นี้จะช่วยแนะนำหนังสือที่เหมาะกับคุณ โดยอิงจากความสนใจและบุคลิกของคุณ
-          ผ่านแบบทดสอบสั้น ๆ พร้อมลิงก์ร้านหนังสือให้คุณเลือกซื้อได้ทันที
+          ผ่านแบบทดสอบสั้น ๆ
         </div>
         <button className={styles.btn} onClick={handleStartQuiz}>
           TAKE THE TEST

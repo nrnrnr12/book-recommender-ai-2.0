@@ -3,6 +3,9 @@ import { useState } from 'react'
 import styles from '../styles/Quiz.module.css'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 // คำถามพร้อมคำแปล
 const questions = [
@@ -111,7 +114,6 @@ export default function QuizPage() {
         </div>
         <div className={styles.navRight}>
           <a href="#">Book</a>
-          <a href="#">Category</a>
           <input type="text" placeholder="Search a Book" />
           <button className={styles.closeBtn}>✕</button>
         </div>
