@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import styles from '@/styles/Result.module.css'
+import styles from '../../../..Result.module.css'
 
 export default function DeleteBookPage() {
   const router = useRouter()
