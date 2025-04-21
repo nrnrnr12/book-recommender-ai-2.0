@@ -1,0 +1,198 @@
+/* Quiz.module.css */
+
+.container {
+    background-color: #ffebd6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #000000;
+  }
+  
+  .navRight {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .navRight a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .navRight input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .closeBtn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .quizWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+  
+  .quizBox {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .questionBlock {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+  }
+  
+  .question {
+    font-size: rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    color: #000000;
+  }
+  
+  .question::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+  
+  .question:hover::after {
+    opacity: 1;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .option input {
+    display: none;
+  }
+  
+  .circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  
+  .option input:checked + .circle {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: currentColor;
+    border-color: currentColor;
+  }
+  
+  .green {
+    color: #4caf50;
+    border-color: #4caf50;
+  }
+  
+  .purple {
+    color: #9c27b0;
+    border-color: #9c27b0;
+  }
+  
+  .scaleLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: #808080;
+    margin-top: 0.3rem;
+    padding: 0 1rem;
+  }
+  
+  .submitButton {
+    background: black;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+  }
+  
+  .logo img {
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .question[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transform: translateY(10px);
+    z-index: 99;
+    font-size: 12px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .submitButton {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
