@@ -42,7 +42,7 @@ export async function POST(req) {
     parsed = parsed.slice(0, 3)
 
     for (let book of parsed) {
-      const query = encodeURIComponent(book.title + ' book')  // ✅ เพิ่มคำค้นให้แม่นยำขึ้น
+      const query = encodeURIComponent(book.title + ' book')  // เพิ่มคำค้นให้แม่นยำขึ้น
       const gRes = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}&orderBy=relevance&printType=books&maxResults=5`)
       const gData = await gRes.json()
 
@@ -87,8 +87,8 @@ ${Object.values(answers).join(', ')}
 
 [
   {
-    "title": "ชื่อหนังสือ",
-    "description": "คำอธิบายหนังสือ 2-3 บรรทัด",
+    "title": "Book name",
+    "description": "2-3 line of Description",
     "image": "https://example.com/book.jpg"
   }
 ]

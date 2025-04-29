@@ -4,8 +4,6 @@ import styles from '../styles/Quiz.module.css'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import LinearProgress from '@mui/material/LinearProgress';
 
 // คำถามพร้อมคำแปล
 const questions = [

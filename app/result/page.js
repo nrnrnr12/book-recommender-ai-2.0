@@ -94,15 +94,15 @@ export default function ResultPage() {
             {books.map((book, index) => (
               <div key={index} className={styles.card}>
                 <img
-                  src={book.image}
+                  src={book.image || '/default-book-cover.jpg'}
                   alt={book.title}
                   className={styles.bookImage}
                   onError={(e) => {
                   e.target.onerror = null
-                  e.target.src = 'https://via.placeholder.com/300x400?text=No+Image'
+                  e.target.src = '/default-book-cover.jpg'
                   }}
-                />
-                <h3>{book.title}</h3>
+                  />
+                <h3>{book.title}</h3> 
                 <p>{book.description?.slice(0, 300)}...</p>
               </div>
             ))}
